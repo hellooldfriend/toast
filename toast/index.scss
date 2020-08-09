@@ -1,0 +1,39 @@
+.toast {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    text-align: right;
+    padding: .5rem;
+    overflow-y: auto;
+
+    &-item {
+        display: inline-block;
+        font-size: 100%;
+        background: #000;
+        color: #fff;
+        padding: .8rem 1.5rem;
+        border-radius: 5px;
+        position: relative;
+        box-sizing: border-box;
+        margin-bottom: .6rem;
+        pointer-events: auto;
+        cursor: pointer;
+        user-select: none;
+
+        &-title {
+            font-weight: bold;
+            margin-bottom: .5rem;
+        }
+
+        &._alert {
+            background: rgb(229, 28, 35);
+        }
+    }
+}

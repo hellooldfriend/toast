@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toast playground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.scss">
+</head>
+<body>
+    <h1>Toast JS vanilla, usage</h1>
+
+    <p>In next versions:</p>
+    <ul>
+        <li>Auto destroying alerts</li>
+        <li>Smooth appearing/dissapearing</li>
+        <li>...loading</li>
+    </ul>
+
+    <br />
+
+    <h4>Message</h4>
+    <pre>toast.message({ message: 'This is a message!' })</pre>
+    <button class="button_message">Try!</button>
+
+    <br />
+
+    <h4>Message with title</h4>
+    <pre>toast.message({ title: 'Some title', message: 'This is a message!' })</pre>
+    <button class="button_message_title">Try!</button>
+
+    <br />
+
+
+    <h4>Alert with message</h4>
+    <pre>toast.alert({ message: 'This is an alert!' })</pre>
+    <button class="button_alert">Try!</button>
+
+    <br />
+
+    <h4>Alert with message and title</h4>
+    <pre>toast.alert({title: 'Any title', message: 'Alert with title'})</pre>
+    <button class="button_alert_title">Try!</button>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

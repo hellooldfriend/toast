@@ -1,0 +1,14 @@
+{
+  "name": "toast-js-vanilla",
+  "version": "1.0.0",
+  "description": "Simple JS vanilla toast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samat Zhetibaev",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.26.10"
+  }
+}
