@@ -16,20 +16,18 @@ const toastTemplate = ({ title, message, index, type }) => {
 export class Toast {
     constructor() {
         this.elements = []
-
-        this.$el =  this.elements.length === 0 ? this.#createContainer() : document.querySelector('.toast')
-
-        this.#render()
+        this.$el =  this.elements.length === 0 ? this._createContainer() : document.querySelector('.toast')
+        this._render()
     }
 
-    #render() {
+    _render() {
         this.$el.innerHTML = this.elements.map((el, i) => toastTemplate({...el, index: i})).join('')
 
         const items = this.$el.querySelectorAll('.toast-item')
         items.forEach(item => item.addEventListener('click', this.handleCloseClick.bind(this)))
     }
 
-    #createContainer() {
+    _createContainer() {
         let container = document.createElement('div')
         container.classList.add('toast')
         document.body.appendChild(container)
@@ -45,17 +43,17 @@ export class Toast {
         newElements.splice(index, 1)
 
         this.elements = newElements
-        this.#render()
+        this._render()
     }
 
     // Features
     message(toast) {
         this.elements.push({...toast, type: 'message'})
-        this.#render()
+        this._render()
     }
 
     alert(toast) {
         this.elements.push({...toast, type: 'alert'})
-        this.#render()
+        this._render()
     }
 }
